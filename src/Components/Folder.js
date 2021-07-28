@@ -28,8 +28,9 @@ const FolderWrapper = styled.button`
   span {
     max-width: 80px;
     text-align: center;
-    color: #fff;
     letter-spacing: 1.5px;
+    font-weight: bold;
+    font-size: 15px;
   }
 `
 
