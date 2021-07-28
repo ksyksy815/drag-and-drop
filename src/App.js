@@ -5,6 +5,7 @@ import Window from './Components/Window'
 import OpenedLayers from './Components/OpenedLayers'
 import plaids from './assets/plaid3.png'
 import Nav from './Components/Nav';
+import ContactForm from './Components/ContactForm';
 
 
 const MainWrapper = styled.div`
@@ -18,6 +19,7 @@ const MainWrapper = styled.div`
 function App() {
   const [openMyFolder, setOpenMyFolder] = useState(false)
   const [welcomeMode, setWelcomeMode] = useState(true)
+  const [formOpen, setFormOpen] = useState(false)
 
   const toggleMyFolder = () => {
     setOpenMyFolder(!openMyFolder)
@@ -31,6 +33,14 @@ function App() {
     setWelcomeMode(true)
   }
 
+  const openContactForm = () => {
+    setFormOpen(true)
+  }
+
+  const closeContactForm = () => {
+    setFormOpen(false)
+  }
+
   return (
     <>
       <GlobalStyle/>
@@ -41,8 +51,13 @@ function App() {
           closeMyFolder={toggleMyFolder}
           welcomeMode={welcomeMode}
           closeWelcomeWindow={closeWelcomeWindow}
+          formOpen={formOpen}
         />
-        <Nav openWelcomeMessage={openWelcomeMessage} />
+        {formOpen && <ContactForm closeContactForm={closeContactForm}/>}
+        <Nav 
+          openWelcomeMessage={openWelcomeMessage}
+          openContactForm={openContactForm}
+        />
       </MainWrapper>
     </>
   );
