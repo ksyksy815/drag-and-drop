@@ -1,15 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
-import Layer from './Layer'
+import MyFolder from './MyFolder'
+import Welcome from './Welcome'
 
 const LayersWrapper = styled.div`
 `
 
-export default function OpenedLayers({ openMyFolder, toggleMyFolder }) {
+export default function OpenedLayers({ openMyFolder, closeMyFolder, welcomeMode, closeWelcomeWindow }) {
   return (
     <LayersWrapper>
       {
-        openMyFolder && <Layer />
+        openMyFolder && <MyFolder closeMyFolder={closeMyFolder} />
+      }
+      {
+        welcomeMode && <Welcome closeWelcomeWindow={closeWelcomeWindow} />
       }
     </LayersWrapper>
   )
