@@ -1,11 +1,15 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 import { LayerWindow, TopBar, Contents} from './Layer.style.js'
-import Welcome from './Welcome'
+import smile from '../assets/smile.png'
+
+const MyFolderWindow = styled(LayerWindow)`
+  z-index: 50;
+`
 
 export default function MyFolder( {closeMyFolder, closeWelcomeWindow}) {
   const [fullScreenMode, setFullScreenMode] = useState(false)
-
+  
   const closeLayer = () => {
     closeMyFolder()
   }
@@ -14,16 +18,22 @@ export default function MyFolder( {closeMyFolder, closeWelcomeWindow}) {
     setFullScreenMode(!fullScreenMode)
   }
 
+  
   return (
-    <LayerWindow fullScreenMode={fullScreenMode}>
+    <MyFolderWindow 
+      fullScreenMode = {fullScreenMode} 
+    >
       <TopBar>
         <li onClick={closeLayer}></li>
         <li></li>
         <li onClick={changeToFullScreen}></li>
       </TopBar>
       <Contents>
-        
+        <div className="icon-box">
+          <img src={smile} alt="smile icon"></img>
+          <span>자기소개</span>
+        </div>
       </Contents>
-    </LayerWindow>
+    </MyFolderWindow>
   )
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import ContactForm from './ContactForm'
 import MyFolder from './MyFolder'
 import Welcome from './Welcome'
 
@@ -10,10 +11,10 @@ export default function OpenedLayers({ openMyFolder, closeMyFolder, welcomeMode,
   return (
     <LayersWrapper>
       {
-        openMyFolder && <MyFolder closeMyFolder={closeMyFolder} />
+        openMyFolder && <MyFolder closeMyFolder={closeMyFolder}/>
       }
       {
-        welcomeMode && <Welcome closeWelcomeWindow={closeWelcomeWindow} />
+        welcomeMode && <Welcome closeWelcomeWindow={closeWelcomeWindow}/>
       }
     </LayersWrapper>
   )

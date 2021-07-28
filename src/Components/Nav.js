@@ -39,14 +39,14 @@ const NavWrapper = styled.nav`
   }
 `
 
-export default function Nav( {openWelcomeMessage} ) {
+export default function Nav( {openWelcomeMessage, openContactForm} ) {
   return (
     <NavWrapper>
       <div className="icon-box" onDoubleClick={openWelcomeMessage}>
         <img src={document} alt="Welcome message icon"/>
-        <span>Welcome</span>
+        <span>Home</span>
       </div>
-      <div className="icon-box">
+      <div className="icon-box" onDoubleClick={openContactForm}>
         <img src={heart} alt="heart icon"></img>
         <span>Contact me</span>
       </div>
