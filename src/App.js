@@ -18,11 +18,16 @@ const MainWrapper = styled.div`
 `
 function App() {
   const [openMyFolder, setOpenMyFolder] = useState(false)
+  const [openProjects, setOpenProjects] = useState(false)
   const [welcomeMode, setWelcomeMode] = useState(true)
   const [formOpen, setFormOpen] = useState(false)
 
   const toggleMyFolder = () => {
     setOpenMyFolder(!openMyFolder)
+  }
+
+  const toggleProjects = () => {
+    setOpenProjects(!openProjects)
   }
 
   const closeWelcomeWindow = () => {
@@ -45,10 +50,17 @@ function App() {
     <>
       <GlobalStyle/>
       <MainWrapper>
-        <Window openMyFolder={openMyFolder} showMyFolder={toggleMyFolder} />
+        <Window 
+          openMyFolder={openMyFolder} 
+          showMyFolder={toggleMyFolder} 
+          openProjects={openProjects}
+          showProjects={toggleProjects}
+        />
         <OpenedLayers 
           openMyFolder={openMyFolder} 
           closeMyFolder={toggleMyFolder}
+          openProjects={openProjects}
+          closeProjects={toggleProjects}
           welcomeMode={welcomeMode}
           closeWelcomeWindow={closeWelcomeWindow}
           formOpen={formOpen}

@@ -9,7 +9,7 @@ import constellation3 from '../assets/constellation3.png'
 
 const WelcomeWindow = styled(LayerWindow)`
   top: 2rem;
-  left: 7rem;
+  left: 2rem;
   height: 60vh;
   width: 800px;
   

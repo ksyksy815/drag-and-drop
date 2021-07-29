@@ -1,18 +1,17 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 import { LayerWindow, TopBar, Contents} from './Layer.style.js'
-import smile from '../assets/smile.png'
 
 const MyFolderWindow = styled(LayerWindow)`
-  top: 22rem;
+  top: 2rem;
   z-index: 50;
 `
 
-export default function MyFolder( {closeMyFolder}) {
+export default function ProjectsLayer ( {closeProjects}) {
   const [fullScreenMode, setFullScreenMode] = useState(false)
   
   const closeLayer = () => {
-    closeMyFolder()
+    closeProjects()
   }
 
   const changeToFullScreen = () => {
@@ -30,9 +29,8 @@ export default function MyFolder( {closeMyFolder}) {
         <li onClick={changeToFullScreen}></li>
       </TopBar>
       <Contents>
-        <div className="icon-box">
-          <img src={smile} alt="smile icon"></img>
-          <span>About me</span>
+        <div>
+          <h2>Project: 사각사각</h2>
         </div>
       </Contents>
     </MyFolderWindow>

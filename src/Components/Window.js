@@ -1,6 +1,6 @@
-import { useState } from 'react'
 import styled from 'styled-components'
 import Folder from './Folder'
+import ProjectFolder from './ProjectFolder'
 
 
 const WindowWrapper = styled.div`
@@ -14,7 +14,7 @@ const WindowWrapper = styled.div`
   row-gap: 1.5rem;
 `
 
-export default function Window( {openMyFolder, showMyFolder} ) {
+export default function Window( {openMyFolder, showMyFolder, openProjects, showProjects} ) {
   return (
     <WindowWrapper>
       <Folder 
@@ -22,10 +22,10 @@ export default function Window( {openMyFolder, showMyFolder} ) {
         openMyFolder={openMyFolder} 
         showMyFolder={showMyFolder}
       />
-      <Folder 
-        name={`직박구리`} 
-        openMyFolder={openMyFolder} 
-        showMyFolder={showMyFolder}
+      <ProjectFolder 
+        name={`프로젝트`} 
+        openProjects={openProjects} 
+        showProjects={showProjects}
       />
     </WindowWrapper>
   )
