@@ -31,7 +31,7 @@ export default function MyFolder( {closeMyFolder, closeWelcomeWindow}) {
       <Contents>
         <div className="icon-box">
           <img src={smile} alt="smile icon"></img>
-          <span>자기소개</span>
+          <span>About me</span>
         </div>
       </Contents>
     </MyFolderWindow>
