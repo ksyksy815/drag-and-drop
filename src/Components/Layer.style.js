@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const LayerWindow = styled.div`
   width: ${props=>props.fullScreenMode ? `100vw` : `500px`};
-  height: ${props=>props.fullScreenMode ? `100vw` : `300px`};
+  height: ${props=>props.fullScreenMode ? `100vw` : `auto`};
   position: absolute;
   top: ${props=>props.fullScreenMode ? `0` : `300px`};
   right: ${props=>props.fullScreenMode ? `0` : `100px`};

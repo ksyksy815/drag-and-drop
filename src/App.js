@@ -10,8 +10,11 @@ import ContactForm from './Components/ContactForm';
 
 const MainWrapper = styled.div`
   width: 100vw;
-  height: 100vh;
-  position: relative;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background:
     url(${plaids}),
     linear-gradient(rgb(255, 180, 212), rgb(166,197, 244));

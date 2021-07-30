@@ -25,6 +25,10 @@ const FormWrapper = styled.div`
       &::placeholder {
         font-family: 'Poppins', sans-serif;
       }
+
+      &:focus {
+        outline: none;
+      }
     }
 
     textarea {

@@ -5,6 +5,7 @@ import ProjectFolder from './ProjectFolder'
 
 const WindowWrapper = styled.div`
   width: 100vw;
+  max-width: 1200px;
   height: 100vh;
   padding: 3rem;
   display: flex;
